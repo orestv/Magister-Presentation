@@ -1,11 +1,12 @@
 \documentclass{beamer}
-
+\mode<presentation>
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english,russian,ukrainian]{babel}
+\usepackage[ukrainian]{babel}
 \newtheorem{defn}{Означення}
-\title{Алгоритми кластеризації даних великих об’ємів}
-\date{}
+\title{Магістерська робота\\Алгоритми кластеризації даних великих об’ємів}
+\author{виконав Волощук О.Р.\\керівник доц. Годич О.В.}
+\date{\today}
 
 \begin{document}
     \begin{frame}
@@ -41,17 +42,20 @@
         \end{itemize}
     \end{frame}
     
+    
     \begin{frame}{Тестові дані}
         Тестування швидкодії алгоритмів проводилось на наборі даних розміром до 100000 об’єктів розмірності 8, 32 та 64.
         
         Кожен об’єкт вибірки --- вектор, всі компоненти якого лежать у проміжку $(-1; 1)$ та є випадковими величинами.
     \end{frame}
     
+    
     \begin{frame}{Критерії оцінки ефективності}
         Ефективнсть реалізації кожного алгоритму оцінювалась в першу чергу за часом роботи.
         
         Для усіх алгоритмів час виконання одної ітерації не змінюється на протязі всього часу роботи, тому оцінювати можна зміни часу виконання ітерації.
     \end{frame}
+    
     
     \begin{frame}{K-means --- оптимізації}
         \begin{center}
@@ -60,10 +64,17 @@
         \end{center}
     \end{frame}
     
+    
     \begin{frame}{K-means --- загальний час роботи}
         \begin{center}
             \includegraphics[scale=0.8]{kmeans_complexity.pdf}
             
+        \end{center}
+    \end{frame}
+    
+    \begin{frame}{DBSCAN --- оптимізації}
+        \begin{center}
+            \includegraphics[scale=0.8]{dbscan_compare.pdf}
         \end{center}
     \end{frame}
     
