@@ -1,0 +1,51 @@
+\documentclass{beamer}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\newtheorem{defn}{Означення}
+\title{Алгоритми кластеризації даних великих об’ємів}
+\date{}
+
+\begin{document}
+    \begin{frame}
+        \maketitle
+    \end{frame}
+
+    \begin{frame}{Задача кластеризації}
+        Нехай $D$ --- множина точок n-вимірного простору. 
+        \begin{defn}
+            \emph{Кластеризацією} $C = \{C \mid C \subseteq D\}$ називається таке розбиття $D$ на підмножини, 
+            для якого виконується $\cup_{C_i \in C} = D$ і $\forall C_i, C_j \in C : C_i \cap C_{j \neq i} = \emptyset$. 
+            Множини $C_i$ називаються кластерами.
+        \end{defn}
+    \end{frame}
+    
+    
+    \begin{frame}{Застосування}
+        \begin{itemize}
+            \item розпізнавання зображень, мови
+            \item соціологія
+            \item медицина
+            \item маркетингові дослідження
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Алгоритми}
+        \begin{itemize}
+            \item K-means
+            \item DBSCAN
+            \item UPGMA
+            \item Neighbor-joining
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{K-means}
+        K-means --- алгоритм роздільної кластеризації, що вимагає для роботи інформації про кількість кластерів.
+        
+        На першій ітерації певним чином формуються первинні кластери.
+        
+        На кожній наступній ітерації знаходяться центроїди кластерів, і кожен елемент відноситься до того кластера, центроїда якого є до нього найближчою.       
+    \end{frame}
+    
+\end{document}
